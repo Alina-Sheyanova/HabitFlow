@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(alembic init:*)",
+      "Bash(python3 -m venv:*)",
+      "Bash(pg_isready:*)",
+      "Bash(psql:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(export PATH=\"/usr/local/opt/node@20/bin:$PATH\")",
+      "Bash(npx playwright test:*)"
+    ]
+  }
+}
