@@ -14,7 +14,9 @@
       "Bash(curl:*)",
       "Bash(python3:*)",
       "Bash(export PATH=\"/usr/local/opt/node@20/bin:$PATH\")",
-      "Bash(npx playwright test:*)"
+      "Bash(npx playwright test:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker cp:*)"
     ]
   }
 }
