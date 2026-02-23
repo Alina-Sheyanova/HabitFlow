@@ -32,13 +32,13 @@ async def get_activity(db: AsyncSession = Depends(get_db)) -> ActivityResponse:
     return ActivityResponse(activity=activity)
 
 
-@router.get("/", response_model=list[HabitResponse])
+@router.get("", response_model=list[HabitResponse])
 async def list_habits(db: AsyncSession = Depends(get_db)) -> list[HabitResponse]:
     result = await db.execute(select(Habit).order_by(Habit.created_at))
     return [_serialize(h) for h in result.scalars().all()]
 
 
-@router.post("/", response_model=HabitResponse, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=HabitResponse, status_code=status.HTTP_201_CREATED)
 async def create_habit(
     body: HabitCreate, db: AsyncSession = Depends(get_db)
 ) -> HabitResponse:

@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .routers.habits import router as habits_router
 
-app = FastAPI(title="HabitFlow API")
+app = FastAPI(title="HabitFlow API", redirect_slashes=False)
 
 app.add_middleware(
     CORSMiddleware,
